@@ -1,0 +1,22 @@
+= Description
+   Unicode methods for Ruby.
+
+= Synopsis
+   # Run with -Ku
+   require 'fortress'
+   
+   λ { puts "hello" } => "Hello"
+   ∑ [1,2,3]          => 6
+   √ 49               => 7.0
+
+= Author's Notes
+	This library is named after the Fortress programming language, which is an
+	offshoot of Fortran, created by Sun. Like Fortran is specializes in
+	mathematical operations. Unlike Fortran, it fully supports Unicode
+	operators.
+	
+	For more on Fortress, the programming language, please visit
+	http://en.wikipedia.org/wiki/Fortress_programming_language
+	
+= Author
+   Daniel Berger

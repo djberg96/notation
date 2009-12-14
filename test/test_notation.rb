@@ -7,7 +7,7 @@
 require 'test/unit'
 require 'notation'
 
-class TC_Fortress < Test::Unit::TestCase
+class TC_Notation < Test::Unit::TestCase
   def test_sigma
     assert_respond_to(Kernel, :∑)
     assert_equal(6, ∑(1,2,3))

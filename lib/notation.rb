@@ -1,6 +1,9 @@
 # Run with -Ku
 
 module Kernel
+  # Version of the notation library
+  NOTATION_VERSION = '0.1.0'
+
   # Make lambda a true lambda
   #
   # Example:

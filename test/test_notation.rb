@@ -8,6 +8,10 @@ require 'test/unit'
 require 'notation'
 
 class TC_Notation < Test::Unit::TestCase
+  def test_version
+    assert_equal('0.1.0', NOTATION_VERSION)
+  end
+
   def test_sigma
     assert_respond_to(Kernel, :∑)
     assert_equal(6, ∑(1,2,3))

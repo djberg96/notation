@@ -5,7 +5,7 @@
   gem install notation
 
 = Synopsis
-  # Run with -Ku
+  # Run with -Ku if using Ruby 1.8.
   require 'notation'
    
   λ { puts "hello" } # => "Hello"

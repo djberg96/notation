@@ -1,14 +1,10 @@
 require 'rake'
+require 'rake/clean'
 require 'rake/testtask'
-include Config
+
+CLEAN.include("**/*.gem", "**/*.rbc")
 
 namespace :gem do
-  desc 'Clean any .gem or .rbc files'
-  task :clean do
-    Dir['*.gem'].each{ |f| File.delete(f) }
-    Dir['**/*.rbc'].each{ |f| File.delete(f) }
-  end
-
   desc 'Build the notation gem'
   task :create => [:clean] do
     spec = eval(IO.read('notation.gemspec'))
@@ -23,10 +19,10 @@ namespace :gem do
 end
 
 Rake::TestTask.new do |t|
-  task :test => 'gem:clean'
+  task :test => :clean
   t.warning = true
   t.verbose = true
-  t.ruby_opts << '-Ku'
+  t.ruby_opts << '-Ku' if RUBY_VERSION.to_f < 1.9
 end
 
 task :default => :test

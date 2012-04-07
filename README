@@ -16,6 +16,17 @@
   This library was inspired by the programming language Fortress, an offshoot
   of Fortran, created by Sun. Fortress supports unicode operators baked into
   the language.
+
+= Restrictions
+  The ability to add unicode methods is limited to method names that have
+  no receiver. This is a limitation of the Ruby parser.
+
+= Copyright
+  (C) 2009-2012 Daniel J. Berger
+  All Rights Reserved
+
+= License
+  Artistic 2.0
 	
 = Author
   Daniel Berger

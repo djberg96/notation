@@ -22,7 +22,7 @@
   no receiver. This is a limitation of the Ruby parser.
 
 = Copyright
-  (C) 2009-2012 Daniel J. Berger
+  (C) 2009-2014 Daniel J. Berger
   All Rights Reserved
 
 = License

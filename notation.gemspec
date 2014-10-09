@@ -2,7 +2,7 @@ require 'rubygems'
 
 Gem::Specification.new do |gem|
   gem.name      = 'notation'
-  gem.version   = '0.1.2'
+  gem.version   = '0.1.1'
   gem.author    = 'Daniel J. Berger'
   gem.email     = 'djberg96@gmail.com'
   gem.license   = 'Artistic 2.0'

@@ -8,13 +8,18 @@ namespace :gem do
   desc 'Build the notation gem'
   task :create => [:clean] do
     spec = eval(IO.read('notation.gemspec'))
-    Gem::Builder.new(spec).build
+    if Gem::VERSION.to_f < 2.0
+      Gem::Builder.new(spec).build
+    else
+      require 'rubygems/package'
+      Gem::Package.build(spec)
+    end
   end
 
   desc 'Install the notation library as a gem'
   task :install => [:create] do
     file = Dir["*.gem"].first
-    sh "gem install #{file}"
+    sh "gem install -l #{file}"
   end
 end
 

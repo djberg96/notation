@@ -7,13 +7,10 @@ CLEAN.include("**/*.gem", "**/*.rbc")
 namespace :gem do
   desc 'Build the notation gem'
   task :create => [:clean] do
+    require 'rubygems/package'
     spec = eval(IO.read('notation.gemspec'))
-    if Gem::VERSION.to_f < 2.0
-      Gem::Builder.new(spec).build
-    else
-      require 'rubygems/package'
-      Gem::Package.build(spec)
-    end
+    spec.signing_key = File.join(Dir.home, '.ssh', 'gem-private_key.pem')
+    Gem::Package.build(spec, true)
   end
 
   desc 'Install the notation library as a gem'

@@ -4,24 +4,31 @@
 
 module Kernel
   # Version of the notation library
-  NOTATION_VERSION = '0.1.1'
+  NOTATION_VERSION = '0.1.2'
 
   # Make lambda a true lambda
   #
   # Example:
-  #    λ { puts 'Hello' }.call => 'Hello'
+  #   λ { puts 'Hello' }.call => 'Hello'
   #
   alias λ proc
 
   # Sigma, i.e. the sum of all elements.
   #
   # Example:
-  #    ∑ [1,2,3] => 6
+  #   ∑ [1,2,3] => 6
   #
   def ∑(*args)
-    sum = 0
-    args.each{ |e| sum += e }
-    sum
+    args.inject(0){ |e,m| m += e }
+  end
+
+  # Pi product, i.e. the product of all elements.
+  #
+  # Example:
+  #   ∏ [2,3,4] => 24
+  #   
+  def ∏(*args)
+    args.inject(1){ |e,m| m *= e }
   end
 
   # Square root

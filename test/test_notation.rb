@@ -10,12 +10,17 @@ require 'notation'
 
 class TC_Notation < Test::Unit::TestCase
   def test_version
-    assert_equal('0.1.1', NOTATION_VERSION)
+    assert_equal('0.1.2', NOTATION_VERSION)
   end
 
   def test_sigma
     assert_respond_to(Kernel, :∑)
     assert_equal(6, ∑(1,2,3))
+  end
+
+  def test_pi
+    assert_respond_to(Kernel, :∏)
+    assert_equal(24, ∏(2,3,4))
   end
 
   def test_square_root

@@ -4,7 +4,7 @@ Unicode methods for Ruby.
 ## Installation
 `gem install notation`
 
-= Synopsis
+## Synopsis
 ```ruby
   require 'notation'
    

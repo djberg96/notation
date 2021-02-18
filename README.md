@@ -6,12 +6,12 @@ Unicode methods for Ruby.
 
 ## Synopsis
 ```ruby
-  require 'notation'
+require 'notation'
    
-  λ { puts "hello" } # => "Hello"
-  ∑ [1,2,3]          # => 6
-  ∏ [2,3,4]          # => 24
-  √ 49               # => 7.0
+λ { puts "hello" } # => "Hello"
+∑ [1,2,3]          # => 6
+∏ [2,3,4]          # => 24
+√ 49               # => 7.0
 ```
 
 ## Author's Notes

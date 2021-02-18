@@ -1,6 +1,6 @@
 require 'rake'
 require 'rake/clean'
-require 'rake/testtask'
+require 'rspec/core/rake_task'
 
 CLEAN.include("**/*.gem", "**/*.rbc")
 
@@ -10,7 +10,7 @@ namespace :gem do
     require 'rubygems/package'
     spec = eval(IO.read('notation.gemspec'))
     spec.signing_key = File.join(Dir.home, '.ssh', 'gem-private_key.pem')
-    Gem::Package.build(spec, true)
+    Gem::Package.build(spec)
   end
 
   desc 'Install the notation library as a gem'
@@ -20,11 +20,7 @@ namespace :gem do
   end
 end
 
-Rake::TestTask.new do |t|
-  task :test => :clean
-  t.warning = true
-  t.verbose = true
-  t.ruby_opts << '-Ku' if RUBY_VERSION.to_f < 1.9
-end
+desc "Run the test suite"
+RSpec::Core::RakeTask.new(:spec)
 
-task :default => :test
+task :default => :spec

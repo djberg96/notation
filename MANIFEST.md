@@ -1,8 +1,9 @@
-* CHANGES
-* MANIFEST
-* README
+* CHANGES.md
+* LICENSE
+* MANIFEST.md
+* README.md
 * Rakefile
 * notation.gemspec
 * certs/djberg96_pub.pem
 * lib/notation.rb
-* test/test_notation.rb
+* spec/notation_spec.rb

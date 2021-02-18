@@ -4,7 +4,7 @@
 
 module Kernel
   # Version of the notation library
-  NOTATION_VERSION = '0.1.2'
+  NOTATION_VERSION = '0.1.3'.freeze
 
   # Make lambda a true lambda
   #
@@ -26,7 +26,7 @@ module Kernel
   #
   # Example:
   #   ∏ [2,3,4] => 24
-  #   
+  #
   def ∏(*args)
     args.inject(1){ |e,m| m *= e }
   end

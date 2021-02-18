@@ -3,6 +3,7 @@
 * Switched from test-unit to rspec.
 * Switched from rdoc to markdown.
 * Updated Rakefile tasks.
+* Updated cert.
 * The NOTATION_VERSION constant is now frozen.
 
 ## 0.1.2 - 12-Dec-2015

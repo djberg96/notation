@@ -10,7 +10,7 @@ require 'notation'
 
 RSpec.describe "Notation" do
   example "version" do
-    expect(Kernel::NOTATION_VERSION).to eq('0.1.3')
+    expect(Kernel::NOTATION_VERSION).to eq('0.2.0')
     expect(Kernel::NOTATION_VERSION).to be_frozen
   end
 

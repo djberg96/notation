@@ -4,7 +4,7 @@
 
 module Kernel
   # Version of the notation library
-  NOTATION_VERSION = '0.1.3'.freeze
+  NOTATION_VERSION = '0.2.0'.freeze
 
   # Make lambda a true lambda
   #

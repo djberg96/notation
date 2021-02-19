@@ -18,4 +18,13 @@ Gem::Specification.new do |spec|
     The notation library provides unicode symbols that you can use as
     methods instead of using standard method names.
   EOF
+
+  spec.metadata = {
+    'homepage_uri'      => 'https://github.com/djberg96/notation',
+    'bug_tracker_uri'   => 'https://github.com/djberg96/notation/issues',
+    'changelog_uri'     => 'https://github.com/djberg96/notation/blob/master/CHANGES.md',
+    'documentation_uri' => 'https://github.com/djberg96/notation/wiki',
+    'source_code_uri'   => 'https://github.com/djberg96/notation',
+    'wiki_uri'          => 'https://github.com/djberg96/notation/wiki'
+  }
 end

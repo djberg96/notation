@@ -1,3 +1,6 @@
+## 0.2.1 - 20-Feb-2021
+* Added metadata to the gemspec.
+
 ## 0.2.0 - 18-Feb-2021
 * Switched to Apache-2.0 license.
 * Switched from test-unit to rspec.

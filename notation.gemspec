@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
   spec.cert_chain = Dir['certs/*']
 
   spec.add_development_dependency('rake')
+  spec.add_development_dependency('rspec', '~> 3.9')
 
   spec.description = <<-EOF
     The notation library provides unicode symbols that you can use as

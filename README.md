@@ -1,3 +1,5 @@
+[![Ruby](https://github.com/djberg96/notation/actions/workflows/ruby.yml/badge.svg)](https://github.com/djberg96/notation/actions/workflows/ruby.yml)
+
 ## Description
 Unicode methods for Ruby.
 

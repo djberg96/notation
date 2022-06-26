@@ -21,11 +21,12 @@ Gem::Specification.new do |spec|
   EOF
 
   spec.metadata = {
-    'homepage_uri'      => 'https://github.com/djberg96/notation',
-    'bug_tracker_uri'   => 'https://github.com/djberg96/notation/issues',
-    'changelog_uri'     => 'https://github.com/djberg96/notation/blob/πρῶτον/CHANGES.md',
-    'documentation_uri' => 'https://github.com/djberg96/notation/wiki',
-    'source_code_uri'   => 'https://github.com/djberg96/notation',
-    'wiki_uri'          => 'https://github.com/djberg96/notation/wiki'
+    'homepage_uri'          => 'https://github.com/djberg96/notation',
+    'bug_tracker_uri'       => 'https://github.com/djberg96/notation/issues',
+    'changelog_uri'         => 'https://github.com/djberg96/notation/blob/πρῶτον/CHANGES.md',
+    'documentation_uri'     => 'https://github.com/djberg96/notation/wiki',
+    'source_code_uri'       => 'https://github.com/djberg96/notation',
+    'wiki_uri'              => 'https://github.com/djberg96/notation/wiki',
+    'rubygems_mfa_required' => 'true'
   }
 end

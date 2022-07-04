@@ -6,6 +6,10 @@ Unicode methods for Ruby.
 ## Installation
 `gem install notation`
 
+## Installing the Trusted Cert
+
+`gem cert --add <(curl -Ls https://raw.githubusercontent.com/djberg96/notation/main/certs/djberg96_pub.pem)`
+
 ## Synopsis
 ```ruby
 require 'notation'

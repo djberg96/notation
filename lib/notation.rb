@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 # Extend the core Kernel module
 module Kernel
   # Version of the notation library
-  NOTATION_VERSION = '0.2.2'.freeze
+  NOTATION_VERSION = '0.2.2'
 
   # Make lambda a true lambda
   #

@@ -1,10 +1,7 @@
-# encoding: utf-8
-
-# Run with -Ku if using Ruby 1.8.
-
+# Extend the core Kernel module
 module Kernel
   # Version of the notation library
-  NOTATION_VERSION = '0.2.1'.freeze
+  NOTATION_VERSION = '0.2.2'.freeze
 
   # Make lambda a true lambda
   #
@@ -19,7 +16,7 @@ module Kernel
   #   ∑ [1,2,3] => 6
   #
   def ∑(*args)
-    args.inject(0){ |e, m| m += e }
+    args.inject(0){ |e, m| m + e }
   end
 
   # Pi product, i.e. the product of all elements.
@@ -28,7 +25,7 @@ module Kernel
   #   ∏ [2,3,4] => 24
   #
   def ∏(*args)
-    args.inject(1){ |e, m| m *= e }
+    args.inject(1){ |e, m| m * e }
   end
 
   # Square root

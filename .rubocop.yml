@@ -6,3 +6,5 @@ AllCops:
     - Gemfile
 Naming/AsciiIdentifiers:
   Enabled: false
+Naming/MethodName:
+  Enabled: false

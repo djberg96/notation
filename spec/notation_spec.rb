@@ -16,12 +16,12 @@ RSpec.describe "Notation" do
 
   example "sigma" do
     expect(Kernel).to respond_to(:∑)
-    expect(∑(1,2,3)).to eq(6)
+    expect(∑(1, 2, 3)).to eq(6)
   end
 
   example "pi" do
     expect(Kernel).to respond_to(:∏)
-    expect(∏(2,3,4)).to eq(24)
+    expect(∏(2, 3, 4)).to eq(24)
   end
 
   example "square_root" do

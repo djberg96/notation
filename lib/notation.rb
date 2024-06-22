@@ -19,7 +19,7 @@ module Kernel
   #   ∑ [1,2,3] => 6
   #
   def ∑(*args)
-    args.inject(0){ |e,m| m += e }
+    args.inject(0){ |e, m| m += e }
   end
 
   # Pi product, i.e. the product of all elements.
@@ -28,7 +28,7 @@ module Kernel
   #   ∏ [2,3,4] => 24
   #
   def ∏(*args)
-    args.inject(1){ |e,m| m *= e }
+    args.inject(1){ |e, m| m *= e }
   end
 
   # Square root

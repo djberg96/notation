@@ -30,7 +30,7 @@ The ability to add unicode methods is limited to method names that have
 no receiver. This is a limitation of the Ruby parser.
 
 ## Copyright
-(C) 2009-2021 Daniel J. Berger
+(C) 2009-2024 Daniel J. Berger
 All Rights Reserved
 
 ## License

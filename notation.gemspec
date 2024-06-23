@@ -2,7 +2,7 @@ require 'rubygems'
 
 Gem::Specification.new do |spec|
   spec.name       = 'notation'
-  spec.version    = '0.2.1'
+  spec.version    = '0.2.2'
   spec.author     = 'Daniel J. Berger'
   spec.email      = 'djberg96@gmail.com'
   spec.license    = 'Apache-2.0'
@@ -27,6 +27,7 @@ Gem::Specification.new do |spec|
     'documentation_uri'     => 'https://github.com/djberg96/notation/wiki',
     'source_code_uri'       => 'https://github.com/djberg96/notation',
     'wiki_uri'              => 'https://github.com/djberg96/notation/wiki',
-    'rubygems_mfa_required' => 'true'
+    'rubygems_mfa_required' => 'true',
+    'github_repo'           => 'https://github.com/djberg96/notation'
   }
 end

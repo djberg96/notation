@@ -1,3 +1,7 @@
+## 0.2.2 - 22-Jun-2024
+* Rubocop config and cleanup.
+* Removed some old directives and comments.
+
 ## 0.2.1 - 20-Feb-2021
 * Added metadata to the gemspec.
 

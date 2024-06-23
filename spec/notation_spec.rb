@@ -1,4 +1,5 @@
-# encoding: utf-8
+# frozen_string_literal: true
+
 ################################################################
 # notation_spec.rb
 #
@@ -8,28 +9,28 @@
 require 'rspec'
 require 'notation'
 
-RSpec.describe "Notation" do
-  example "version" do
-    expect(Kernel::NOTATION_VERSION).to eq('0.2.1')
+RSpec.describe 'Notation' do
+  example 'version' do
+    expect(Kernel::NOTATION_VERSION).to eq('0.2.2')
     expect(Kernel::NOTATION_VERSION).to be_frozen
   end
 
-  example "sigma" do
+  example 'sigma' do
     expect(Kernel).to respond_to(:∑)
-    expect(∑(1,2,3)).to eq(6)
+    expect(∑(1, 2, 3)).to eq(6)
   end
 
-  example "pi" do
+  example 'pi' do
     expect(Kernel).to respond_to(:∏)
-    expect(∏(2,3,4)).to eq(24)
+    expect(∏(2, 3, 4)).to eq(24)
   end
 
-  example "square_root" do
+  example 'square_root' do
     expect(Kernel).to respond_to(:√)
     expect(√(49)).to eq(7.0)
   end
 
-  example "lambda" do
+  example 'lambda' do
     expect(λ{ 'hello' }.call).to eq('hello')
   end
 end

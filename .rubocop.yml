@@ -1,0 +1,14 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - notation.gemspec
+    - Rakefile
+    - Gemfile
+Naming/AsciiIdentifiers:
+  Enabled: false
+Naming/BinaryOperatorParameterName:
+  Enabled: false
+Naming/MethodName:
+  Enabled: false
+Layout/SpaceBeforeBlockBraces:
+  Enabled: false

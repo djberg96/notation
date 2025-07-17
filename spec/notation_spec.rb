@@ -118,4 +118,22 @@ RSpec.describe 'Notation' do
   example 'lambda' do
     expect(λ{ 'hello' }.call).to eq('hello')
   end
+
+  example 'numeric_extensions' do
+    expect(10).to respond_to(:≥?)
+    expect(10).to respond_to(:≤?)
+    expect(10).to respond_to(:≠?)
+    expect(10).to respond_to(:≈?)
+    
+    expect(10.≥?(5)).to be true
+    expect(5.≤?(10)).to be true
+    expect(5.≠?(3)).to be true
+    expect(3.14159.≈?(3.14160, 0.001)).to be true
+    
+    # Test aliases
+    expect(10.greater_equal?(5)).to be true
+    expect(5.less_equal?(10)).to be true
+    expect(5.not_equal?(3)).to be true
+    expect(3.14159.approx_equal?(3.14160, 0.001)).to be true
+  end
 end

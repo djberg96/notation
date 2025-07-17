@@ -1,0 +1,99 @@
+grammar NotationGrammar
+  rule expression
+    comparison / unary_operation / parenthesized
+  end
+
+  rule comparison
+    left:numeric space? op:comparison_operator space? right:numeric {
+      def eval_node
+        case op.text_value
+        when '≥' then ≥(left.value, right.value)
+        when '≤' then ≤(left.value, right.value)
+        when '≠' then ≠(left.value, right.value)
+        when '≈' then ≈(left.value, right.value)
+        when '>' then left.value > right.value
+        when '<' then left.value < right.value
+        when '==' then left.value == right.value
+        when '>=' then left.value >= right.value
+        when '<=' then left.value <= right.value
+        when '!=' then left.value != right.value
+        end
+      end
+    }
+  end
+
+  rule unary_operation
+    op:unary_operator space? operand:numeric {
+      def eval_node
+        case op.text_value
+        when '√' then √(operand.value)
+        when '∛' then ∛(operand.value)
+        when '∜' then ∜(operand.value)
+        when '！' then ！(operand.value.to_i)
+        when '｜' then ｜(operand.value)
+        when '-' then -operand.value
+        when '+' then +operand.value
+        end
+      end
+    }
+  end
+
+  rule array_operation
+    op:array_operator space? '[' space? elements:number_list space? ']' {
+      def eval_node
+        case op.text_value
+        when '∑' then ∑(elements.values)
+        when '∏' then ∏(elements.values)
+        end
+      end
+    }
+  end
+
+  rule number_list
+    first:numeric rest:(',' space? numeric)* {
+      def values
+        [first.value] + rest.elements.map { |e| e.numeric.value }
+      end
+    }
+  end
+
+  rule parenthesized
+    '(' space? expr:expression space? ')' {
+      def eval_node
+        expr.eval_node
+      end
+    }
+  end
+
+  rule comparison_operator
+    '≥' / '≤' / '≠' / '≈' / '>=' / '<=' / '==' / '!=' / '>' / '<'
+  end
+
+  rule unary_operator
+    '√' / '∛' / '∜' / '！' / '｜' / '-' / '+'
+  end
+
+  rule array_operator
+    '∑' / '∏'
+  end
+
+  rule numeric
+    float / integer {
+      def value
+        text_value.include?('.') ? text_value.to_f : text_value.to_i
+      end
+    }
+  end
+
+  rule float
+    integer '.' integer
+  end
+
+  rule integer
+    [0-9]+
+  end
+
+  rule space
+    [ \t\n\r]+
+  end
+end

@@ -1,3 +1,21 @@
+## 0.3.0 - 17-Jul-2025
+* Major expansion of Unicode mathematical notation methods
+* Improved ∑ (sigma) and ∏ (pi) methods to handle both arrays and individual arguments
+* Added ∛ (cube root) method
+* Added ∜ (fourth root) method
+* Added ｜｜ (absolute value) method
+* Added ∞ (infinity) constant
+* Added ！ (factorial) method
+* Added Δ (delta/difference) method
+* Added ≈ (approximately equal) method
+* Added ≠ (not equal) method
+* Added ≤ (less than or equal) method
+* Added ≥ (greater than or equal) method
+* Added ± (plus or minus) method
+* Added ° (degrees to radians) method
+* Added ％ (percentage) method
+* Enhanced documentation and test coverage
+
 ## 0.2.1 - 20-Feb-2021
 * Added metadata to the gemspec.
 

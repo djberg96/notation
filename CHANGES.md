@@ -1,4 +1,4 @@
-## 0.2.3 - 17-Jul-2025
+## 0.3.0 - 17-Jul-2025
 * Major expansion of Unicode mathematical notation methods
 * Improved ∑ (sigma) and ∏ (pi) methods to handle both arrays and individual arguments
 * Added ∛ (cube root) method

@@ -3,7 +3,7 @@
 # Extend the core Kernel module
 module Kernel
   # Version of the notation library
-  NOTATION_VERSION = '0.2.3'
+  NOTATION_VERSION = '0.3.0'
 
   # Make lambda a true lambda
   #

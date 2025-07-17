@@ -13,11 +13,31 @@ Unicode methods for Ruby.
 ## Synopsis
 ```ruby
 require 'notation'
-   
-λ { puts "hello" } # => "Hello"
-∑ [1,2,3]          # => 6
-∏ [2,3,4]          # => 24
-√ 49               # => 7.0
+
+# Lambda notation
+λ { puts "hello" }         # => "Hello"
+
+# Mathematical operations
+∑ [1,2,3]                  # => 6 (sum)
+∏ [2,3,4]                  # => 24 (product)
+√ 49                       # => 7.0 (square root)
+∛ 27                       # => 3.0 (cube root)
+∜ 16                       # => 2.0 (fourth root)
+｜-5｜                      # => 5 (absolute value)
+！ 5                       # => 120 (factorial)
+
+# Comparison operations
+≈ 3.14159, 3.14160, 0.001  # => true (approximately equal)
+≠ 5, 3                     # => true (not equal)
+≤ 5, 10                    # => true (less than or equal)
+≥ 10, 5                    # => true (greater than or equal)
+
+# Utility functions
+Δ 10, 7                    # => 3 (delta/difference)
+± 5, 2                     # => [3, 7] (plus or minus)
+° 180                      # => 3.14159... (degrees to radians)
+％ 50                      # => 0.5 (percentage)
+∞                          # => Float::INFINITY
 ```
 
 ## Author's Notes
@@ -35,6 +55,6 @@ All Rights Reserved
 
 ## License
 Apache-2.0
-	
+
 ## Author
 Daniel Berger
